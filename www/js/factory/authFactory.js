@@ -10,14 +10,13 @@
             $localStorage.token = token;
           },
           forgot: function (data) {
-            return $http.post(Config.api + 'users/forgot', data)
+            return $http.post(Config.api + 'authenticate/forgot', data);
           },
           signin: function (data) {
             return $http.post(Config.api + 'authenticate', data);
           },
           logout: function () {
-            $http.get(Config.api + 'logout').then(function(response ){ delete $localStorage.token })
-            
+            delete $localStorage.token
           },
           me: function () {
             return $http.get(Config.api + 'me')

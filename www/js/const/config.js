@@ -1,7 +1,7 @@
 (function () {
-  var online = false;
+  var online = true;
   app.constant('Config', {
-      api: online ? 'http://192.168.1.75/api/v1/' : 'http://localhost:3000/api/v1/',
-      socket: online ? 'http://192.168.1.75/' : 'http://localhost:3000/'
+      api: online ? 'http://10.98.1.82/api/v1/' : 'http://localhost:3000/api/v1/',
+      socket: online ? 'http://10.98.1.82/' : 'http://localhost:3000/'
   })
 })();
