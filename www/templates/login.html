@@ -1,0 +1,25 @@
+<ion-modal-view>
+    <ion-content class="padding painelBackground">
+        <form ng-submit="authenticate(user)" style="margin-top: 100px">
+            <div class="list">
+                <div class="text-center">
+                    <img src="img/logo.png" width="321px" class="img-responsive">
+                </div>
+                <div class="padding" style="margin-top: 50px">
+                    <label class="item item-input">
+                        <span class="input-label">CPF</span>
+                        <input type="text" ng-model="user.cpf" ui-br-cpf-mask requrired>
+                    </label>
+                    <label class="item item-input" style="margin-top: 5px">
+                        <span class="input-label">Senha</span>
+                        <input type="password" ng-model="user.password">
+                    </label>
+                    <button class="button button-block button-positive mybutton" ng-disabled="!user.cpf || !user.password" type="submit">
+                        <strong> Entrar </strong>
+                    </button>
+                </div>
+                <a style="margin-left: 100px" href="#/forgot" style="color: #000fff !important">Esqueceu sua Senha ?</a>
+            </div>
+        </form>
+    </ion-content>
+</ion-modal-view>

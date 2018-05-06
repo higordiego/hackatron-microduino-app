@@ -1,0 +1,32 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <button class="button button-icon icon ion-chevron-left" ng-click="GoBack()"></button>
+        <h5 class="title">Esqueceu sua Senha ?</h5>
+    </ion-header-bar>
+    <ion-content class="padding painelBackground">
+        <form ng-submit="forgot(user)" style="margin-top: 80px">
+            <div class="list">
+                <div class="text-center">
+                    <img src="img/logo.png" width="250px" class="img-responsive" style="justify-items: left;">
+                </div>
+                <div class="padding" style="margin-top: 50px">
+                    <div class="item-text-wrap text-justify">
+                        <h4> Enviaremos uma nova senha!</h4>
+                    </div>
+                    <br/>
+                    <label class="item item-input">
+                        <span class="input-label">CPF</span>
+                        <input type="text" ng-model="user.cpf" ui-br-cpf-mask required>
+                    </label>
+                    <div style="margin-top: 5px">
+                        <button class="button button-block button-positive mybutton" ng-disabled="!user.cpf" type="submit">
+                            <strong> Regastar </strong>
+                        </button>
+                    </div>
+                    <br/>
+                    <!-- <a style="margin-left: 100px"ng-click="return()"> Retornar o Login ?</a> -->
+                </div>
+            </div>
+        </form>
+    </ion-content>
+</ion-modal-view>

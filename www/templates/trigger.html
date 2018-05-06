@@ -1,0 +1,13 @@
+<ion-view view-title="Gatilhos" ng-init="triggersFn()">
+    <ion-content class="bgGeral">
+        <ion-refresher pulling-text="Atualizando ..." on-refresh="doRefresh()"></ion-refresher>
+        <div class="padding">
+            <div class="item item-button-right" ng-repeat="trigger in triggers">
+                {{trigger.name}}
+                <button class="button button-positive" ng-click="triggerAdd(trigger)">
+                    <i class="icon-right ion-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

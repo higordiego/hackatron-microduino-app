@@ -1,0 +1,12 @@
+<ion-view view-title="Gatilhos" ng-init="triggersFn()">
+    <ion-content class="bgGeral">
+        <ion-refresher pulling-text="Atualizando ..." on-refresh="doRefresh()"></ion-refresher>
+        <div class="padding">
+            <div class="card">
+                <div class="item item-text-wrap">
+                    {{trigger.description}}
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
